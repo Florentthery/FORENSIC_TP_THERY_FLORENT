@@ -11,3 +11,5 @@ Une fois que nous avons isolé notre machine du LAN de notre réseau, nous la te
 J'ai utilisé l'outil testdisk pour essayer de recupérer des elements supprimé de la clé mais sans réussite aussi
 
 J'ai regardé le Header du fichier et vérifier que le HASH était le bon. 
+
+Après 16h45 -> Via test disk, on peut utiliser l'outil Photorep qui va nous permettre de récupérer les photos, on remarque donc plusieurs photos d'animaux, dont un flag
