@@ -6,4 +6,4 @@ Après avoir trouvé une clé USB suspecte dans un parking, un employé nous la 
 
 Rapport :
 
-Une fois que nous avons isolé notre machine du LAN de notre réseau, nous la testons sur un environnement Linux. 
+Une fois que nous avons isolé notre machine du LAN de notre réseau, nous la testons sur un environnement Linux. Pour commencer, nous utilisons l'outil binwalk qui va nous permettre d'analyser l'iso de la clé. On trouve des informations qui ne sont pas normalement présentes dans ce genre de fichier, tel que des images PNG et JPEG. De plus, on peut remarquer la présence d'un fichier Adobe Flash. Pour acceder à ce fichier, j'ai essayé de monter la partition de la clé usb via mount mais sans aucun succès.
