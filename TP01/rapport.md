@@ -6,4 +6,4 @@ Après avoir trouvé une clé USB suspecte dans un parking, un employé nous la 
 
 Rapport :
 
-
+Une fois que nous avons isolé notre machine du LAN de notre réseau, nous la testons sur un environnement Linux. 
