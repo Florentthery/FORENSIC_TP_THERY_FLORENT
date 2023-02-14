@@ -12,4 +12,12 @@ J'ai utilisé l'outil testdisk pour essayer de recupérer des elements supprimé
 
 J'ai regardé le Header du fichier et vérifier que le HASH était le bon. 
 
-Après 16h45 -> Via test disk, on peut utiliser l'outil Photorep qui va nous permettre de récupérer les photos, on remarque donc plusieurs photos d'animaux, dont un flag
+Via l'outil test disk, on peut utiliser Photorep qui est logiciel de recupération de fichiers effacés. Celui-ci va donc nous permettre de récupérer les photos. Après l'utilisation de la commande "photorep USB_Image", l'outil nous retourne 5 fichiers. On remarque donc plusieurs photos d'animaux, dont deux flags et un fichier .ini.
+
+
+
+
+
+Conclusion
+
+Après analyse de la clé UDB, nous pouvons conclure que 
