@@ -6,7 +6,7 @@ Après avoir trouvé une clé USB suspecte dans un parking, un employé nous la 
 
 Rapport :
 
-Une fois que nous avons isolé notre machine du LAN de notre réseau, nous la testons sur un environnement Linux. Pour commencer, nous utilisons l'outil binwalk qui va nous permettre d'analyser l'iso de la clé et des trouver des fichiers ou des microprogrammes. On trouve des informations telles que des images PNG et JPEG. De plus, on peut remarquer la présence d'un fichier Adobe Flash. 
+Une fois que nous avons isolé notre machine du LAN de notre réseau, nous la testons sur un environnement Linux. Pour commencer, nous utilisons l'outil binwalk qui va nous permettre d'analyser l'iso de la clé et de trouver des fichiers ou des microprogrammes. On trouve des informations telles que des images PNG et JPEG. De plus, on peut remarquer la présence d'un fichier Adobe Flash. 
 
 
 ![image](https://user-images.githubusercontent.com/78368428/218697833-5e0214d9-3e3f-44bf-b453-e49ee7d1819c.png)
@@ -18,7 +18,7 @@ Cependant, le contenu de la clé USB est vide. Pour acceder à ces fichiers, j'a
 
 
 
-Via l'outil test disk, on peut utiliser Photorep qui est logiciel de recupération de fichiers effacés. Celui-ci va donc nous permettre de récupérer les photos. Après l'utilisation de la commande "photorep USB_Image", l'outil nous retourne 5 fichiers. On remarque donc plusieurs photos d'animaux, dont deux flags et un fichier .ini.
+Via l'outil test disk, on peut utiliser Photorep qui est un logiciel de recupération de fichiers effacés. Celui-ci va donc nous permettre de récupérer les photos. Après l'utilisation de la commande "photorep USB_Image", l'outil nous retourne 5 fichiers. On remarque donc plusieurs photos d'animaux, dont deux flags et un fichier .ini.
 
 
 ![image](https://user-images.githubusercontent.com/78368428/218697925-f0ffecbd-1c51-4340-ad5f-30a9fc5466c8.png)
