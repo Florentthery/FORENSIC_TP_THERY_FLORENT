@@ -21,7 +21,15 @@ Avec la commande "AWK", trouvez-moi la consomation annuelle de la commune qui a 
 
 Correction exercice numéro 1 :
 
+![image](https://user-images.githubusercontent.com/78368428/218746261-c911afb1-bb22-4eac-88ac-f1908e865ac5.png)
+![image](https://user-images.githubusercontent.com/78368428/218746381-9690eca5-5eca-4306-9b1d-5c6b4a1de798.png)
 
+
+
+
+Correction exercice 2 :
+
+![image](https://user-images.githubusercontent.com/78368428/218746498-0e86299e-09d6-45c6-9e96-e8b7d49b866d.png)
 
 
 
