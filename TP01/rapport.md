@@ -27,6 +27,9 @@ Via l'outil test disk, on peut utiliser Photorep qui est logiciel de recupérati
 En plus de ce travail, j'ai regardé le Header du fichier pour essayer de récupérer des informations (voir "hexdump"). On peut voir que le clé est sous du FAT32, sous du msdos 5. En amont, nous vérifions que le HASH n'a pas été modifié entre temps. Nous comparons celui donné et celui que nous trouvons dans la photo "sum". Ce sont donc les memes. Nous notons que si nous effectuons cette commande après un testdisk, le hash est modifié.
 
 
+![image](https://user-images.githubusercontent.com/78368428/218698228-be7b4ac6-cc6e-4eed-8937-2830ce5a2151.png)
+
+
 ![image](https://user-images.githubusercontent.com/78368428/218697724-4d05bc8e-3eaf-435b-8999-5d294ebed62e.png)
 
 
