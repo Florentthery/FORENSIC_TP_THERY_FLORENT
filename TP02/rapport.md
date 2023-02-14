@@ -26,7 +26,9 @@ Correction exercice numéro 1 :
 
 
 Nous allons premierement trouver à quelle colonne correspond la commune. Après inspection, on trouve la colonne 9. Pour trouver seulement Canteleu, on utilise "if".
-Pour calculer le nombre, on utilise "SUM". On va rajouter +1 a chaque fois que la colonne commune contient canteleu 
+Pour calculer le nombre, on crée la variable "SUM" qui va s'incrémenter de 1 à chaque fois que la colonne commune contient canteleu.
+
+Le résultat n'est pas très propre mais on arrive sur un résultat de 554
 
 
 Correction exercice 2 :
