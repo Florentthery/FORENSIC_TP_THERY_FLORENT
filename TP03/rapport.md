@@ -1,4 +1,4 @@
-Introduction :
+# Introduction :
 
 
 Une attaque informatique, ciblée sur le site web de B0sh-cyber, aurait permis d'infiltrer des outils malveillants sur la machine. Le site Web a donc été mis en quarantaine et est inaccessible pour le moment. Nous pouvons faire remonter cette attaque 3 septembre, dans la matinée. 
@@ -6,7 +6,7 @@ A l'aide de nos connaissances informatiques, nous allons analyser cette attaque 
 
 
 
-Méthodologie :
+# Méthodologie :
 
 Tout d'abord, nous allons regarder les derniers fichiers qui ont été modifié. Avec la commande __find / -not -path '/sys*' -not -path '/dev*' -not -path '/proc*' -mmin -60__, nous remontons tous les fichiers modifiés il y a moins de 60 minutes, excluant les repertoires /sys, /dev, /proc. Voila ce que nous trouvons, ce qui nous amène a rien de concluant  :
 
@@ -60,7 +60,7 @@ On se retrouve alors avec un fichier .txt que nous ouvrons :
 
 
 
-Résultats/Conclusion : 
+# Résultats/Conclusion : 
 
 A la suite de l'attaque qu'a subi le serveur Web, nous pouvons faire remonter plusieurs informations : 
 
@@ -69,7 +69,7 @@ A la suite de l'attaque qu'a subi le serveur Web, nous pouvons faire remonter pl
 
 L'attaquant a surrement utilisé une faille informatique via apache2 pour se connecter à distance. 
 
-Recommandations :
+# Recommandations :
 
 Afin de sécuriser au mieux le serveur, il est nécessaire de le tenir à jour et d'avoir des moyens de le sécurisé, que ce soit logique ou matériel. La mise en place de la d'une connexion via SSL pourrait résoudre l'erreur rencontrée et vu plus haut. A voir si une DMZ a été créé avec un reverse proxy pour en plus empêcher que le serveur soit en front sur Internet. De plus, le changement des mots de passe est nécessaire.
 La tache planifiée doit aussi etre supprimée pour empêcher au pirate de se connecter à distance.
