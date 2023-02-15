@@ -1,14 +1,14 @@
 # Introduction :
 
 
-Une attaque informatique, ciblée sur le site web de B0sh-cyber, aurait permis d'infiltrer des outils malveillants sur la machine. Le site Web a donc été mis en quarantaine et est inaccessible pour le moment. Nous pouvons faire remonter cette attaque 3 septembre, dans la matinée. 
+Une attaque informatique, ciblée sur le site web de b0sh-cyber, aurait permis d'infiltrer des outils malveillants sur la machine. Le site Web a donc été mis en quarantaine et est inaccessible pour le moment. Nous pouvons faire remonter cette attaque 3 septembre, dans la matinée. 
 A l'aide de nos connaissances informatiques, nous allons analyser cette attaque afin de se rendre compte de ce que le hacker a tenté d'introduire dans notre SI.
 
 <br/>
 
 # Méthodologie :
 
-Tout d'abord, nous allons regarder les derniers fichiers qui ont été modifié. Avec la commande __find / -not -path '/sys*' -not -path '/dev*' -not -path '/proc*' -mmin -60__, nous remontons tous les fichiers modifiés il y a moins de 60 minutes, excluant les repertoires /sys, /dev, /proc. Voila ce que nous trouvons, ce qui nous amène a rien de concluant  :
+Tout d'abord, nous allons regarder les derniers fichiers qui ont été modifiés. Avec la commande __find / -not -path '/sys*' -not -path '/dev*' -not -path '/proc*' -mmin -60__, nous remontons tous les fichiers modifiés il y a moins de 60 minutes, excluant les répertoires /sys, /dev, /proc. Voila ce que nous trouvons, ce qui nous amène à rien de concluant  :
 
 <br/>
 
@@ -17,8 +17,8 @@ Tout d'abord, nous allons regarder les derniers fichiers qui ont été modifié.
 <br/>
 
 
-Ensuite, nous regardons les différents logs a notre disposition, situés dans __/var/log__. Comme notre serveur Web a été attaqué, on commence par les logs d'apache2, notament les fichiers __access.log__ et __error.log__
-On ne remonte rien de particulier, une erreur critique sur le serveur concernant du SSL, à voir pour rajouter cette couche de sécurtité en plus et de bien tenir à jour ce serveur :
+Ensuite, nous regardons les différents logs à notre disposition, situés dans __/var/log__. Comme notre serveur Web a été attaqué, on commence par les logs d'apache2, notament les fichiers __access.log__ et __error.log__
+On ne remonte rien de particulier, une erreur critique sur le serveur concernant du SSL, à voir pour rajouter cette couche de sécurité en plus et de bien tenir à jour ce serveur :
 
 <br/>
 
@@ -31,7 +31,7 @@ On regarde aussi les logs d'apt pour voir si l'intrus n'a pas directement télé
 
 <br/>
 
-Pour la suite, on regarde les commandes qui ont été effectué avant notre arrivée en lisant le fichier bash_history avec la commande __cat ~/.bash_history__, ce qui nous remonte :
+Pour la suite, on regarde les commandes qui ont été effectuées avant notre arrivée en lisant le fichier bash_history avec la commande __cat ~/.bash_history__, ce qui nous remonte :
 
 <br/>
 
@@ -41,7 +41,7 @@ Pour la suite, on regarde les commandes qui ont été effectué avant notre arri
 
 
 On peut remarquer enormément de points. Déjà, il a pu accéder à notre fichier __/etc/passwd__. Les mots de passes devront etre modifiés au plus vite.
-Il a regardé les fichiers de configuration de notre site web et a tenté un ping vers un IP en 138.66.89.12, surement une de ses machines à distance.
+Il a regardé les fichiers de configuration de notre site web et a tenté un ping vers un IP en 138.66.89.12, sûrement une de ses machines à distance.
 On observe une modification dans la crontab du serveur. On regarde à l'intérieur du fichier avec __cat /etc/crontab__ :
 
 <br/>
@@ -51,12 +51,12 @@ On observe une modification dans la crontab du serveur. On regarde à l'intérie
 <br/>
 
 
-On remarque une ligne qui est présente avec l'IP du hacker. Cette commande a pour but de créer connexion en shell à distance qui pourrait être utilisé par pour accéder à la machine à distance et exécuter des commandes.
+On remarque une ligne qui est présente avec l'IP du hacker. Cette commande a pour but de créer une connexion en shell à distance qui pourrait être utilisé pour accéder à la machine à distance et exécuter des commandes.
 
 <br/>
 
-Enfin, on peut observer la réation d'un .zip appelé b0sch_cyber_tools, reprensant l'introduction d'outils malveillants par le hacker. Celui-ci se trouve dans le repertoire /opt/leak. Nous ne possedons pas le mot de passe pour l'unzip car il a été supprimé. 
-Cependant, pour le zip, le mot de passe a du etre tappé, ainsi, les logs sont censés avoir gardé les traces étant donné que le pirate ne les a pas supprimés.
+Enfin, on peut observer la réation d'un .zip appelé b0sch_cyber_tools, correspondant à l'introduction d'outils malveillants par le hacker. Celui-ci se trouve dans le répertoire /opt/leak. Nous ne possédons pas le mot de passe pour l'unzip car il a été supprimé. 
+Cependant, pour le zip, le mot de passe a du être tapé, ainsi, les logs sont censés avoir gardé les traces étant donné que le pirate ne les a pas supprimés.
 
 <br/>
 
@@ -69,7 +69,7 @@ Dans le fichier __access.log__, avec la commande __cat access.log | grep "138.66
 
 <br/>
 
-Ainsi, nous pouvons tenté d'unzip le fichier. cela nous retourne une erreur de droit, nous devons alors l'unzip vers un autre répertoire avec la commande __unzip bosh_cyber_tools.zip -d /home/b0osh/__.
+Ainsi, nous pouvons tenter d'unzip le fichier. Cela nous retourne une erreur de droit, nous devons alors l'unzip vers un autre répertoire avec la commande __unzip bosh_cyber_tools.zip -d /home/b0osh/__.
 
 <br/>
 
@@ -86,18 +86,18 @@ On se retrouve alors avec un fichier .txt que nous ouvrons :
 
 # Résultats/Conclusion : 
 
-A la suite de l'attaque qu'a subi le serveur Web, nous pouvons faire remonter plusieurs informations : 
+A la suite de l'attaque qu'a subie le serveur Web, nous pouvons faire remonter plusieurs informations : 
 
 1. La tache planifiée dans la crontab
 2. La présence du fichier b0sch_cyber_tools.zip
 
 <br/>
 
-L'attaquant a surrement utilisé une faille informatique via apache2 pour se connecter à distance. 
+L'attaquant a sûrement utilisé une faille informatique via apache2 pour se connecter à distance. 
 
 # Recommandations :
 
-Afin de sécuriser au mieux le serveur, il est nécessaire de le tenir à jour et d'avoir des moyens de le sécurisé, que ce soit logique ou matériel. La mise en place de la d'une connexion via SSL pourrait résoudre l'erreur rencontrée et vu plus haut. A voir si une DMZ a été créé avec un reverse proxy pour en plus empêcher que le serveur soit en front sur Internet. De plus, le changement des mots de passe est nécessaire.
+Afin de sécuriser au mieux le serveur, il est nécessaire de le tenir à jour et d'avoir des moyens de le sécuriser, que ce soit logique ou matériel. La mise en place d'une connexion via SSL pourrait résoudre l'erreur rencontrée et vu plus haut. A voir si une DMZ a été créée avec un reverse proxy pour en plus empêcher que le serveur soit en front sur Internet. De plus, le changement des mots de passe est nécessaire.
 <br/>
 La tache planifiée doit aussi etre supprimée pour empêcher au pirate de se connecter à distance.
 
