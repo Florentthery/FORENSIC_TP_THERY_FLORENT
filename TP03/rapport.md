@@ -55,7 +55,7 @@ On remarque une ligne qui est présente avec l'IP du hacker. Cette commande a po
 
 <br/>
 
-Enfin, on peut observer la réation d'un .zip appelé b0sch_cyber_tools, correspondant à l'introduction d'outils malveillants par le hacker. Celui-ci se trouve dans le répertoire /opt/leak. Nous ne possédons pas le mot de passe pour l'unzip car il a été supprimé. 
+Enfin, on peut observer la rédaction d'un .zip appelé b0sch_cyber_tools, correspondant à l'introduction d'outils malveillants par le hacker. Celui-ci se trouve dans le répertoire /opt/leak. Nous ne possédons pas le mot de passe pour l'unzip car il a été supprimé. 
 Cependant, pour le zip, le mot de passe a du être tapé, ainsi, les logs sont censés avoir gardé les traces étant donné que le pirate ne les a pas supprimés.
 
 <br/>
