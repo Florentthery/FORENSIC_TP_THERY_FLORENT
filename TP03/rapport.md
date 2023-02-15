@@ -60,9 +60,19 @@ On se retrouve alors avec un fichier .txt que nous ouvrons :
 
 
 
+Résultats/Conclusion : 
 
+A la suite de l'attaque qu'a subi le serveur Web, nous pouvons faire remonter plusieurs informations : 
 
+1. La tache planifiée dans la crontab
+2. La présence du fichier b0sch_cyber_tools.zip
 
+L'attaquant a surrement utilisé une faille informatique via apache2 pour se connecter à distance. 
+
+Recommandations :
+
+Afin de sécuriser au mieux le serveur, il est nécessaire de le tenir à jour et d'avoir des moyens de le sécurisé, que ce soit logique ou matériel. La mise en place de la d'une connexion via SSL pourrait résoudre l'erreur rencontrée et vu plus haut. A voir si une DMZ a été créé avec un reverse proxy pour en plus empêcher que le serveur soit en front sur Internet. De plus, le changement des mots de passe est nécessaire.
+La tache planifiée doit aussi etre supprimée pour empêcher au pirate de se connecter à distance.
 
 
 
