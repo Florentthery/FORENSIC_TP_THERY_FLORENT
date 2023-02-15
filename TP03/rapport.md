@@ -27,7 +27,7 @@ On ne remonte rien de particulier, une erreur critique sur le serveur concernant
 <br/>
 
 
-On regarde aussi les logs d'apt pour voir si l'intrus n'a pas directement téléchargé des paquets. On ne trouve pas de nouveaux pasquets ni rien d'anormal.
+On regarde aussi les logs d'apt pour voir si l'intrus n'a pas directement téléchargé des paquets. On ne trouve pas de nouveaux paquets ni rien d'anormal.
 
 <br/>
 
